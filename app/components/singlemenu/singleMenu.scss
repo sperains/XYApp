@@ -1,0 +1,208 @@
+$menuItemHeight:60px;
+
+
+.sider-wrap{
+	height: 100%;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	transition: width 0.1s;
+	-moz-transition: width 0.1s; 
+	-webkit-transition: width 0.1s;
+	-o-transition: width 0.1s; 
+
+	/*菜单栏顶部收缩按钮背景高度及颜色*/
+	.collapse-menu-wrap{
+		height: 60px;
+		background-color: #b3b3c7;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		div {
+			height: 20px;
+			width: 20px;
+			background-image: url('../../resources/images/menu.png');
+			background-size: cover;
+			
+		}
+
+		.collapse{
+			transition: all 0.2s;
+			transform:rotate(90deg);
+			-ms-transform:rotate(90deg); 	/* IE 9 */
+			-moz-transform:rotate(90deg); 	/* Firefox */
+			-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+			-o-transform:rotate(90deg); 	
+		}
+	}
+
+	.menu-list{
+		flex: 1;
+		background-image: url(../../resources/images/menubg.png);
+		
+		/*当前菜单样式*/
+		.active{
+			border-left: solid 4px #374260 ;
+			font-weight: bold;
+
+			.donate{
+				background-image: url(../../resources/images/donate-active.png);
+			}
+
+			.account{
+				background-image: url(../../resources/images/account-active.png);
+			}
+
+			.activity{
+				background-image: url(../../resources/images/activity-active.png);
+			}
+
+			.life{
+				background-image: url(../../resources/images/life-active.png);
+			}
+
+			.member{
+				background-image: url(../../resources/images/member-active.png);
+			}
+
+			.number{
+				background-image: url(../../resources/images/number-active.png);
+			}
+
+			.score{
+				background-image: url(../../resources/images/score-active.png);
+			}
+
+			.feedback{
+				background-image: url(../../resources/images/feedback-active.png);
+				background-size: cover;
+			}
+		}
+
+		
+
+		.menu-item{
+			height: $menuItemHeight;
+			line-height: $menuItemHeight;
+			font-size: 18px;
+			color: #374260;
+/*			display: flex;
+			flex-direction: row;
+			align-items: center;*/
+			overflow: hidden;
+			margin-right: 20px;
+			padding-left: 20px;
+			border-bottom: solid 1px #bdbdc7;
+
+			.img{
+				height: 20px;
+				width: 20px;
+				background-size: cover;
+				display: inline-block;
+				margin: 20px 0 ;
+			}
+			.collapse{
+				position: absolute;
+				left:  10px ;
+			}
+
+			span {
+				display: inline-block;
+				float: right;
+				padding-right: 45px;
+				height: 60px;
+				line-height: 60px;
+			}
+		}
+
+		
+		/*鼠标滑过菜单时的样式*/
+		.menu-item:hover{
+			cursor: pointer;
+			border-left: solid 4px #374260 ;
+			font-weight: bold;
+
+			.donate{
+				background-image: url(../../resources/images/donate-active.png);
+			}
+
+			.account{
+				background-image: url(../../resources/images/account-active.png);
+			}
+
+			.activity{
+				background-image: url(../../resources/images/activity-active.png);
+			}
+
+			.life{
+				background-image: url(../../resources/images/life-active.png);
+			}
+
+			.member{
+				background-image: url(../../resources/images/member-active.png);
+			}
+
+			.number{
+				background-image: url(../../resources/images/number-active.png);
+			}
+
+			.score{
+				background-image: url(../../resources/images/score-active.png);
+			}
+
+			.feedback{
+				background-image: url(../../resources/images/feedback-active.png);
+			}
+		}
+		
+
+		/*菜单小图标*/
+		.donate{
+			background-image: url(../../resources/images/donate.png);
+		}
+
+		.account{
+			background-image: url(../../resources/images/account.png);
+		}
+
+		.activity{
+			background-image: url(../../resources/images/activity.png);
+		}
+
+		.life{
+			background-image: url(../../resources/images/life.png);
+		}
+
+		.member{
+			background-image: url(../../resources/images/member.png);
+		}
+
+		.number{
+			background-image: url(../../resources/images/number.png);
+		}
+
+		.score{
+			background-image: url(../../resources/images/score.png);
+		}
+
+		.feedback{
+			background-image: url(../../resources/images/feedback.png);
+		}
+	}
+}
+
+.sider-wrap-collapse{
+	width: 40px;
+
+	.menu-list .menu-item{
+		border: none;
+	}
+
+	.menu-list .menu-item:hover{
+		border: none;
+	}
+	
+}

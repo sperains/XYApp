@@ -1,0 +1,74 @@
+{
+  "name": "xy",
+  "version": "1.0.0",
+  "description": "xy",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack",
+    "server": "webpack-dev-server --hot --inline --progress --colors",
+    "deploy": "cross-env NODE_ENV=production webpack -p --config webpack.production.config.js"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "style": "css"
+        }
+      ]
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^2.3.2",
+    "console-polyfill": "^0.2.3",
+    "draft-js": "^0.9.1",
+    "equals": "^1.0.5",
+    "es5-shim": "^4.5.9",
+    "flexibility": "^2.0.1",
+    "fs": "^0.0.1",
+    "g2": "^2.1.1",
+    "g2-react": "^1.1.0",
+    "jquery": "^3.1.1",
+    "mockjs": "^1.0.1-beta3",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-fileupload": "^2.4.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^3.0.0",
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.6.0",
+    "uuid": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-import": "^1.0.1",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.0",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.13.0",
+    "postcss-flexibility": "^1.1.0",
+    "postcss-loader": "^1.1.1",
+    "precss": "^1.4.0",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-baidu-map": "^1.3.5",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.0"
+  }
+}

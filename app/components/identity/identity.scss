@@ -1,0 +1,39 @@
+.identity-wrap{
+	
+	display: flex;
+	flex-direction: column;
+	min-width: 1250px;
+
+	.identity-top{
+		height: 60px;
+		line-height: 60px;
+		font-size: 18px;
+		color: #333;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 40px;
+		border-bottom: solid 1px #c3c3c3;
+
+		span{
+			margin-left: 20px;
+		}
+
+		.new {
+			height: 40px;
+			width: 160px;
+			background-image: url(../../resources/images/new-identity.png);
+			cursor: pointer;
+		}
+		.new:hover{
+			background-image: url(../../resources/images/new-identity-hover.png);
+		}
+	}
+
+	.identity-content{
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 40px;
+	}
+}

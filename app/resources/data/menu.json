@@ -1,0 +1,193 @@
+[
+	{
+		"key" : "1",
+		"text" : "喜悦捐赠",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "11",
+				"text" : "option1",
+				"isLeaf" : false ,
+				"subMenu" : [
+					{
+						"key" : "111",
+						"text" : "option11",
+						"isLeaf" : true
+					},
+					{
+						"key" : "112",
+						"text" : "option12",
+						"isLeaf" : true
+					},
+					{
+						"key" : "113",
+						"text" : "option13",
+						"isLeaf" : true
+					}
+				]
+			}
+		]
+	},
+	{
+		"key" : "2",
+		"text" : "喜悦积分",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "21",
+				"text" : "option2",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "22",
+				"text" : "option2",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "23",
+				"text" : "option2",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "24",
+				"text" : "option2",
+				"isLeaf" : true 
+			}
+		]
+	},
+	{
+		"key" : "3",
+		"text" : "会员管理",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "31",
+				"text" : "option3",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "32",
+				"text" : "option3",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "33",
+				"text" : "option3",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "34",
+				"text" : "option3",
+				"isLeaf" : true 
+			}
+		]
+	},
+	{
+		"key" : "4",
+		"text" : "喜悦活动",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "41",
+				"text" : "option4",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "42",
+				"text" : "option4",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "43",
+				"text" : "option4",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "44",
+				"text" : "option4",
+				"isLeaf" : true 
+			}
+		]
+	},
+	{
+		"key" : "5",
+		"text" : "生命数字",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "51",
+				"text" : "option5",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "52",
+				"text" : "option5",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "53",
+				"text" : "option5",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "54",
+				"text" : "option5",
+				"isLeaf" : true 
+			}
+		]
+	},
+	{
+		"key" : "6",
+		"text" : "正念生活",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "61",
+				"text" : "option6",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "62",
+				"text" : "option6",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "63",
+				"text" : "option6",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "64",
+				"text" : "option6",
+				"isLeaf" : true 
+			}
+		]
+	},
+	{
+		"key" : "7",
+		"text" : "账户管理",
+		"isLeaf" : false ,
+		"subMenu" : [
+			{
+				"key" : "71",
+				"text" : "option7",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "72",
+				"text" : "option7",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "73",
+				"text" : "option7",
+				"isLeaf" : true 
+			},
+			{
+				"key" : "74",
+				"text" : "option7",
+				"isLeaf" : true 
+			}
+		]
+	}
+]

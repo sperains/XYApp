@@ -1,0 +1,348 @@
+
+
+.newactive-wrap{
+
+	height: 100%;
+	min-width: 1000px;
+
+	.newactive-topbar{
+		height: 60px;
+		background-color: #eee;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-size: 18px;
+		justify-content: space-between;
+		padding-right: 40px;
+		border-bottom: solid 1px #c3c3c3;  
+		
+		.nav{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.back{
+				height: 60px;
+				width: 60px;
+				background-image: url(../../../resources/images/back.png);
+				cursor: pointer;
+			}
+
+			.back:hover{
+				background-image: url(../../../resources/images/back-hover.png);
+			}
+
+			.parent{
+				margin-left: 20px;
+				margin-right: 10px;
+				color: #999;
+				cursor: pointer;
+			}
+			.current{
+				margin-left: 10px;
+				color: #333;
+			}
+		}
+
+		.save{
+			width: 160px;
+			height: 40px;
+			background-image: url(../../../resources/images/save.png);
+			cursor: pointer;
+		}
+
+		.save:hover{
+			background-image: url(../../../resources/images/save-hover.png);
+		}
+
+
+
+		
+	}
+
+	.newactive-content{
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		margin-top: 20px;
+		position: relative;
+
+		.active-form{
+			width: auto;
+			margin:  20px auto 0 auto ;
+			
+			.img-desc{
+				display: inline-block;
+				width: 100px;
+				margin-left: 75px;
+				color: #999;
+				padding-bottom: 20px;
+			}
+
+			.loading{
+				margin-left: 50px;
+				width: 120px;
+				display: inline-block;
+			}
+			
+			/*设置活动图片尺寸及背景*/
+			.active-img{
+				margin-left: 75px;
+				height: 240px;
+				width: 400px;
+				position: relative;
+				box-sizing: border-box;
+				background-image: url(../../../resources/images/addimg.jpg) ;
+				background-size: cover;
+				background-color: #f5f5f5;
+			}
+
+			.active-QRcode{
+				margin-left: 75px;
+				height: 240px;
+				width: 240px;
+				position: relative;
+				box-sizing: border-box;
+				background-image: url(../../../resources/images/addQRcode.jpg) ;
+				background-size: cover;
+				background-color: #f5f5f5;
+			}
+
+			.bghidden{
+				background-image: none;
+			}
+
+			
+			.form-item{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				font-size: 16px;
+				margin-bottom: 20px;
+
+				.label{
+					margin-right: 10px;
+					width: 60px;
+					text-align: right;
+				}
+
+				input{
+					width: 400px;
+					height: 40px;
+					line-height: 40px;
+					text-align: left;
+					padding-left: 10px;
+					padding-right: 10px;
+					border: solid 1px #d3d3d3;
+					outline: none;
+				}
+
+				@media  (min-width: 1920px){
+					input {
+						width: 760px;
+					}
+				}
+		
+
+
+
+
+				.ant-input , .ant-time-picker-input{
+					padding-right: 40px;
+					border-radius: 0;
+					width: 190px;
+					font-size: 16px;
+				}
+				
+				@media (min-width: 1920px){
+					.ant-input , .ant-time-picker-input{
+						width : 370px;
+					}
+				}
+				
+
+				.ant-time-picker-input{
+					margin-left: 20px;
+				}
+
+				.ant-input-wrapper{
+					width: 400px;
+					height: 160px;
+
+					.ant-input{
+						width: 100%;
+						height: 160px !important;
+						text-align: left;
+					}
+				}
+
+				.new-subtitle{
+					margin-left: 10px;
+					cursor: pointer;
+				}
+			}
+
+			.active-maintitle{
+				div{
+					width: 400px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					border: solid 1px #d3d3d3;
+					background-color: #fff;
+					padding-right: 10px;
+
+					input{
+						border: none;
+						outline: none;
+					}
+				}
+
+				@media  (min-width: 1920px){
+					div{
+						width: 760px;
+						input {
+							width: 760px;
+						}
+					}
+				}
+			}
+
+
+
+
+			
+			/*活动简介*/
+			.active-desc {
+				
+				.label {
+					align-self: flex-start;
+				}
+
+				div{
+					width: 400px;
+					height: 160px;
+					border: solid 1px #d3d3d3;
+					background-color: #fff;
+					display: flex;
+					flex-direction: column;
+					padding-right: 10px;
+
+					span{
+						text-align: right;
+					}
+
+					textarea{
+						height: 160px;
+						border: none;
+						padding-left: 10px;
+						padding-top: 10px;
+						/*尺寸不可修改(去掉右下角三角)*/
+						resize: none;
+						/*去掉focus边框*/
+						outline: none;
+					}
+
+				}
+
+				@media  (min-width: 1920px){
+					div{
+						width: 760px;
+					}
+				}
+			}
+			
+			/*活动地址*/
+			.active-address{
+
+			}
+			
+			/*报名限额*/
+			.active-applyoptions{
+
+				div{
+					width: 400px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: flex-start;
+
+					.checkbox{
+						width: 30px;
+						height: 30px;
+						margin-right: 20px;
+						background-image: url(../../../resources/images/checkbox.png);
+					}
+
+					.checked{
+						background-image: url(../../../resources/images/checkbox-choosed.png);
+					}
+
+					span{
+						width: 100px;
+					}
+
+					.count{
+						width: 250px;
+					}
+				}
+
+				
+				@media (min-width: 1920px){
+
+					div{
+						width: 760px;
+
+						.count {
+							width: 610px;
+						}
+					}
+				}
+			}
+
+			.applyoptions-hidden{
+				display: none;
+			}
+
+			.subtitle-hidden{
+				display: none;
+			}
+		}
+	}
+}
+
+.avatar-uploader,
+.avatar-uploader-trigger,
+.avatar {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.avatar-uploader {
+  display: block;
+  cursor: pointer;
+  border: solid 4px #fff;
+  box-sizing: border-box;
+}
+.avatar-uploader-trigger {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 28px;
+  color: transparent;
+}
+
+.map{
+	width: 400px;
+	height: 320px;
+	cursor: pointer;
+}
+
+
+@media  (min-width: 1920px){
+	.map {
+		height: 400px;
+		width: 760px;
+	}
+}

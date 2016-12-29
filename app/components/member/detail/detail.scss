@@ -1,0 +1,126 @@
+
+
+/*会员详情顶部导航条*/
+.memberdetail-top{
+	height: 60px;
+	font-size: 18px;
+	border-bottom: solid 1px #c3c3c3;  
+	
+	.nav{
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.back{
+			height: 60px;
+			width: 60px;
+			display: inline-block;
+			background-image: url(../../../resources/images/back.png);
+			cursor: pointer;
+		}
+
+		.parent{
+			margin-left: 20px;
+			margin-right: 10px;
+			color: #999;
+			cursor: pointer;
+		}
+		.current{
+			margin-left: 10px;
+			color: #333;
+		}
+	}
+	
+}
+
+
+.memberdetail-content{
+	min-width: 880px;
+	margin-left: 60px;
+	margin-right: 60px;
+
+
+
+	.member-info{
+		height: 60px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: solid 1px #c3c3c3;  
+
+		.name{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-size: 16px;
+			color: #999;
+
+			span:first-child{
+				font-size : 20px;
+				color: #333;
+				margin-right: 20px;
+			}
+			span:last-child{
+				margin-left: 10px;
+			}
+		}
+
+		.money{
+			font-size: 16px;
+	
+			.outer{
+				color: #333;
+				margin : 0 10px;
+
+				span{
+					margin-left: 10px;
+					margin-right: 5px;
+				}
+			}
+		}
+
+	}
+
+	.member-count{
+		margin-top: 40px;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #333;
+
+		span{
+			margin-left: 20px;
+		}
+	}
+
+	.member-list{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.member-item{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: #333;
+			font-size: 18px;
+			margin-right: 34px;
+			margin-bottom: 40px;
+
+			.img-wrap{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				margin-bottom: 10px;
+				overflow: hidden;
+
+				img{
+					height: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,202 @@
+.active-wrap{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	
+	/*活动页顶部*/
+	.active-topbar{
+		height: 60px;
+		min-width: 800px;
+		line-height: 60px;
+		font-size: 18px;
+		color: #333;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #eee;
+		padding: 0 20px;
+		border-bottom: solid 1px #c3c3c3;  
+
+		.new{
+			width: 160px;
+			height: 40px;
+			background-image: url(../../resources/images/new-active.png);
+			cursor: pointer;
+		}
+
+		.new:hover{
+			background-image: url(../../resources/images/new-active-hover.png);
+		}
+	}
+
+
+	/*活动页活动内容*/
+	.active-content{
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		min-width: 800px;
+		
+		/*单个活动内容*/
+		.active-item{
+			display: flex;
+			flex-direction: column;
+			margin:0  20px;
+			border-bottom: solid 1px #c3c3c3;
+			
+			/*活动描述信息*/
+			.desc{
+				height: 60px;
+				font-size: 16px;
+				color: #333;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				
+				/*创建时间*/
+				.create-time{
+					
+				}
+				
+				/*发布*/
+				.release{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					.release-img{
+						width: 60px;
+						height: 30px;
+						margin-left: 10px;
+						margin-right: 20px;
+						cursor: pointer;
+					}
+
+					.release {
+						background-image: url(../../resources/images/open.png)
+					}
+
+					.unrelease {
+						background-image: url(../../resources/images/close.png);
+					}
+					
+				}
+
+				.hidden{
+					display: none;
+				}
+
+				
+
+			}
+			
+			/*活动内容详细信息*/
+			.content{
+				height: 120px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				border-top: solid 1px #e3e3e3;  
+				
+				/*logo,标题,地址*/
+				.info{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					.logo{
+						height: 80px;
+						width: 80px;
+						margin-right: 20px;
+						box-sizing : border-box;
+						border: solid 4px #fff;
+					}
+
+					.detail{
+						display: flex;
+						flex-direction: column;
+						font-size: 16px;
+						color: #999;
+
+						span:first-child{
+							color: #333;
+							margin-bottom: 20px;
+						}
+					}
+				}
+				
+				/*编辑,删除*/
+				.options{	
+					display: flex;
+					height: inherit;
+					flex-direction: row;
+					align-items: center;
+					margin-right: 20px;
+					font-size: 16px;
+					color: #333;
+					justify-content: space-around;
+
+					.hidden {
+						visibility: hidden;
+					}
+
+					.apply{
+						align-self : flex-start;
+						margin-right: 20px;
+						margin-top: 9px;
+						color: #999;
+					}
+
+					div {
+						span{
+							display: block;
+							height: 40px;
+							width: 80px;
+							text-align: center;
+							line-height: 40px;
+							border-bottom: solid 1px #e3e3e3; 
+							cursor: pointer;
+						}
+
+						span:hover{
+							color: blue;
+						}
+
+						.edit{
+
+						}
+
+						.del {
+						}
+
+						.unhandle{
+							color: #999;
+							cursor: default;
+						}
+						.unhandle:hover{
+							color: #999;
+						}
+
+						span:last-child{
+							border-bottom: none;
+						}
+
+						.over:hover{
+							cursor: default; ;
+							color: #333 ;
+
+						}
+					}
+					
+
+					
+				}
+			}
+
+		}
+	}
+}

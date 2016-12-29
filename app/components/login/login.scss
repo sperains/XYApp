@@ -1,0 +1,114 @@
+
+.login-wrap{
+	
+	width:  100%;
+	height:  100%;
+
+	background-image: url(../../resources/images/login-bg.png);
+	background-size: 100% 100%;
+	
+
+	.login-content{
+		width: 400px;
+		height: 600px;
+		margin: 0 auto ;
+		background: -ms-linear-gradient(top, #37415f,  #292b3b);        /* IE 10 */
+		background:-moz-linear-gradient(top,#37415f,  #292b3b);/*火狐*/ 
+		background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#37415f), to(#292b3b));/*谷歌*/ 
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#37415f), to(#292b3b));      /* Safari 4-5, Chrome 1-9*/
+		background: -webkit-linear-gradient(top, #37415f,  #292b3b);   /*Safari5.1 Chrome 10+*/
+		background: -o-linear-gradient(top, #37415f,  #292b3b);  /*Opera 11.10+*/
+
+
+		.logo{
+			height: 300px;
+			font-size: 48px;
+			font-family:  "SimSum" ;
+			line-height: 300px;
+			text-align: center;
+			font-weight: bold;
+			color: #fff;
+		}
+
+		.login-form{
+			width: 100%;
+			margin-bottom: 70px;
+			
+			.form-item{
+				margin:  0 50px;
+				height: 60px;
+				line-height: 60px;
+				font-size: 16px;
+				color: #374260;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+
+				input{
+					width: 100%;
+					background-color: transparent;
+					outline: none;
+					border: none;
+					border-bottom: solid 1px #374260;
+					text-align: center;
+					color: #fff;
+				}				
+
+				::-moz-placeholder { color: #374260; font-size: 16px ; text-align: center;}
+				::-webkit-input-placeholder { color: #374260; font-size: 16px ; text-align: center; }
+				:-ms-input-placeholder { color: #374260; font-size: 16px ; text-align: center; }
+			}
+
+			.login{
+				height: 60px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				.icon{
+					cursor: pointer;
+					height: 22px;
+					width: 13px;
+					background-image: url(../../resources/images/login-icon.png);
+				}
+			}
+
+			.option{
+				height: 14px;
+				line-height: 14px;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				margin:  0 50px;
+				margin-top: 30px;
+				color: #374260;
+
+				span{
+					cursor: pointer;
+				}
+
+				.remember{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+
+					.checkbox{
+						width: 14px;
+						height: 14px;	
+						margin-right: 5px;
+					}
+					.checked{
+						background-image: url(../../resources/images/login-checkbox-choosed.png);
+					}
+
+					.unchecked{
+						background-image: url(../../resources/images/login-checkbox.png);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+$iconSize : 20px;
+
+/*左侧菜单最外层div*/
+.sider-wrap{
+	height: 100%;
+	transition: all 0.2s;
+	-js-display: flex;
+	display: flex;
+	flex-direction: column;
+
+}
+
+/*左侧菜单顶部包裹小图标的div*/
+.menu-icon	{
+	height: 60px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #b3b3c7;
+	
+	/*菜单顶部图片*/
+	img {
+		height: $iconSize;
+		width: $iconSize;
+		margin: 0 auto;
+		cursor : pointer ;
+		transition: all 0.2s;
+	}
+}
+
+/*设置菜单背景颜色*/
+.ant-menu-root{
+	flex: 1 ;
+	background-image: url(../resources/images/menubg.png);
+}
+
+
+/*设置子菜单背景颜色*/
+.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+	background-color: #e3e3e3;
+}
+
+.ant-menu-submenu-inline .ant-menu-submenu{
+	
+}
+
+
+/*左侧菜单列表div*/
+.menu-title{
+	height: 60px;
+	line-height: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	/*background-image: url(../resources/images/menubg.png);*/
+	/*border-left: solid 3px #000;*/
+	
+	/*设置左侧菜单文字位置及大小*/
+	span {
+		font-size: 18px;
+		color: #374260;
+		margin-left: 62px;
+	}
+}
+
+/*选中菜单左侧边框*/
+.ant-menu-submenu-open .menu-title{
+	/*border-left: solid 4px #374260; */
+}
+
+.ant-menu-submenu-title{
+	margin: 0 !important ;
+	padding: 0 !important;
+	height: 60px !important;
+}
+
+.ant-menu-submenu-title:after{
+	line-height: 60px;
+} 
+
+/*设置左侧菜单图标大小及绝对定位*/
+.icon{
+	display: block;
+	height: $iconSize;
+	width: $iconSize;
+	line-height: $iconSize;
+	position: absolute;
+	background-size: cover;
+	left: 20px;
+}
+
+.collapse{
+	left: 10px;
+}
+
+/*菜单顶部小图片旋转动画*/
+.rotate{
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); 	/* IE 9 */
+	-moz-transform:rotate(90deg); 	/* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+	-o-transform:rotate(90deg); 	
+}

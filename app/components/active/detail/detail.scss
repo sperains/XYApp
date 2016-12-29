@@ -1,0 +1,191 @@
+
+
+.detail-top{
+	height: 60px;
+	background-color: #eee;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 18px;
+	justify-content: space-between;
+	padding-right: 40px;
+	border-bottom: solid 1px #c3c3c3;  
+
+	.nav{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			.back{
+				height: 60px;
+				width: 60px;
+				background-image: url(../../../resources/images/back.png);
+				cursor: pointer;
+			}
+
+			.back:hover{
+				background-image: url(../../../resources/images/back-hover.png);
+			}
+
+			.parent{
+				margin-left: 20px;
+				margin-right: 10px;
+				color: #999;
+				cursor: pointer;
+			}
+
+			.title{
+				margin-left: 10px;
+				margin-right: 10px;
+				color: #999;
+			}
+			.current{
+				margin-left: 10px;
+				color: #333;
+			}
+
+		}
+
+		.export{
+			height: 40px;
+			width: 160px;
+			background-image: url(../../../resources/images/export.png);
+			cursor: pointer;
+		}
+
+		.export:hover{
+			background-image: url(../../../resources/images/export-hover.png);
+		}
+}
+
+
+.detail-content{
+	margin-top: 60px;
+	margin-left: 60px;
+	margin-right: 40px;
+}
+
+.ant-table-row-level-0{
+	background-color: #f5f5f5;
+}
+
+
+th , tr{
+	text-align: center !important;
+}
+
+thead{
+	th{
+		background-color: #374260 !important;
+		font-size: 16px;
+		color: #fff;
+		border-radius: none !important;
+	}
+}
+
+td{
+	a{
+		display: block;
+		text-decoration: none;
+		margin: 0 auto ;
+		width: 100px;
+		color: #000;
+		/*内容超出宽度时隐藏超出部分的内容 */
+		overflow:hidden; 
+		/*当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+		text-overflow:ellipsis; 
+		white-space:nowrap;
+		cursor: auto;
+	}
+	a:hover,a:active{
+		color: #000;
+	}
+
+}
+
+.ant-table-row {
+	font-size: 14px;
+	color: #333;
+}
+
+.ant-table-row-hover{
+	background-color: #fff !important;
+}
+
+/*签到状态*/
+.check{
+	width: 20px;
+	height: 20px;
+	margin: 0 auto ;
+	background-image: url(../../../resources/images/checkin.png);
+
+}
+/*未签到状态*/
+.uncheck{
+	width: 20px;
+	height: 20px;
+	margin: 0 auto ;
+	background-image: url(../../../resources/images/uncheckin.png);
+}
+
+/*通过padding设置行高*/
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+	padding:8px 8px;
+}
+
+/*去除antd默认圆角*/
+.ant-table , .ant-table table ,.ant-pagination-prev , .ant-pagination-next , .ant-select-selection , .ant-pagination-item , .ant-select-dropdown{
+	border-radius: 0px;
+}
+
+/*分页栏激活时样式*/
+.ant-pagination-item-active {
+	background-color: #374260;
+	border: solid 1px #000 !important;
+	color: #000;
+}
+
+/*分页栏*/
+.ant-pagination-item:hover , .ant-pagination-prev:hover , .ant-pagination-next:hover  , .ant-select-selection:hover{
+	border: solid 1px #000 !important;
+	box-shadow: none !important;
+	a {
+		color: #000;
+	}
+}
+
+.ant-table-row{
+	height: 40px;
+}
+
+
+/*表格边框*/
+.ant-table-tbody > tr > td{
+	border-bottom: solid 1px #d3d3d3;
+}
+
+.ant-table-tbody > tr > td:first-child{
+	border-left: solid 1px #d3d3d3;
+}
+.ant-table-tbody > tr > td:last-child{
+	border-right: solid 1px #d3d3d3;
+}
+
+.ant-select-open .ant-select-selection{
+	border:solid 1px #000;
+	box-shadow: none !important;
+}
+
+.ant-table-content{
+	height: 657px;
+/*	border: solid 1px #c3c3c3; */
+}
+
+.ant-table-body{
+	overflow-x: hidden !important;
+}
+
+.ant-table-body:hover{
+	overflow-x: scroll !important;
+}
+

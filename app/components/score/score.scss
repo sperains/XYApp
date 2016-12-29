@@ -1,0 +1,65 @@
+.score-wrap{
+	display: flex;
+	flex-direction: column;
+
+
+	.score-top{
+		height: 60px;
+		line-height: 60px;
+		border-bottom: solid 1px #c3c3c3;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-right: 40px;
+
+		.tabs{
+			display: flex;
+			flex-direction: row;
+			text-align: center;
+			font-size: 18px;
+			color: #333;
+			span{
+				display: block;
+				height: 60px;
+				width: 160px;
+				box-sizing: border-box;
+				cursor: pointer;
+			}
+
+			.active{
+				border-bottom: solid 4px #374260;
+				color: #000;
+			}
+		}
+
+		.save{
+			width: 160px;
+			height: 40px;
+			background-image: url(../../resources/images/save.png);
+			cursor: pointer;
+		}
+
+		.save:hover{
+			background-image: url(../../resources/images/save-hover.png);
+		}
+
+
+		.export{
+			width: 160px;
+			height: 40px;
+			background-image: url(../../resources/images/export.png);
+			cursor: pointer;
+		}
+
+		.export:hover{
+			background-image: url(../../resources/images/export-hover.png);
+		}
+	}
+	
+	.score-content{
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 40px;
+	}
+}

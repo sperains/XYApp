@@ -1,0 +1,129 @@
+
+$topbarHeight : 80px;
+
+/*设置顶部菜单栏高度*/
+.topbar{
+	height: $topbarHeight;
+}
+
+
+/*设置内容区位置*/
+.content{
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	/*height:calc(100% - $topbarHeight); */
+}
+
+.right-wrap{
+	flex: 1;
+	background-color: #f5f5f5;
+	overflow-y: auto;
+}
+
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	opacity: 0.4;
+	background-color: #000;
+}
+
+.password-edit-wrap{
+	width: 100%;
+	height: 420px;
+	position: fixed;
+	left: 0;
+	top: 150px;
+	background-color: transparent;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+
+	.edit-form{
+		background-color: #fff;
+		width: 400px;
+		height: 420px;
+		padding-top: 40px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.close{
+			position: absolute;
+			height: 60px;
+			width: 60px;
+			background-color: red;
+			top: 0;
+			left: -60px;
+			background-image: url(../resources/images/modal-close.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			cursor: pointer;
+		}	
+
+		.edit-btn{
+			width: 320px;
+			height: 40px;
+			background-image: url(../resources/images/password-edit-btn.png);
+			cursor: pointer;
+
+			span{
+				display: block;
+				color: #fff;
+				text-align: center;
+				line-height: 40px;
+				font-size: 16px;
+			}
+		}
+
+		.edit-btn:hover{
+			background-image: url(../resources/images/password-edit-btn-hover.png);
+		}
+
+
+		.edit-form-item{
+			width: 320px;
+			height: 40px;
+			margin:  0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-size: 16px;
+			box-sizing: border-box;
+			border: solid 1px #c3c3c3;
+			margin-bottom: 20px;
+
+			.label {
+				display: block;
+				width: 80px;
+				text-align: right;
+				color: #333;
+				margin-right: 10px;
+			}
+
+			input{
+				flex: 1;
+				outline: none;
+				width: 40px;
+				border: none;
+			}
+
+			.get-checknum{
+				width: 140px;
+				display: block;
+				background-color: #f5f5f5;
+				height: 38px;
+				border-left: solid 1px #c3c3c3;
+				line-height: 38px;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+	}
+}

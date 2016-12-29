@@ -1,0 +1,109 @@
+.topbar{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #292b3b;
+
+	.logo{
+		width: 200px;
+		min-width: 200px;
+		height: 100%;
+		line-height: 80px;
+		font-size: 36px;
+		background-image: url(../resources/images/logo.png);
+		padding-left: 50px;
+	}
+
+	.nav{
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		color: #fff;
+
+
+		.message{
+			width: 120px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			
+			span{
+				margin-right: 20px;
+			}
+		}
+
+
+		.info{
+			width: auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			cursor: pointer;
+			padding-right: 40px;
+
+			.user{
+				margin-right: 20px;
+			}
+
+			.password{
+				margin-right: 20px;
+			}
+
+			.logout{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				.logout-img{
+					height: 16px;
+					width: 16px;
+					margin-left: 5px;
+					background-image: url(../resources/images/logout.png);
+				}
+			}
+
+			
+		}
+	}
+
+}
+
+
+
+
+/*顶部条   微图标*/
+.badge-icon {
+  width: 22px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(../resources/images/mail.png);
+
+  	
+}
+
+.ant-badge-dot{
+		left : 24px;
+ }
+
+/*顶部右边下拉菜单*/
+.ant-dropdown-link{
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	background-image: url(../resources/images/user.png);
+	background-size: cover;
+}
+
+/*调整右边下拉菜单小箭头位置*/
+.anticon-down:before{
+	margin-left: 28px;
+	line-height: 32px;
+}
+
+/*设置右边下拉菜单中子项的文本对齐方式*/
+.ant-dropdown-menu-item{
+	text-align: center;
+}
