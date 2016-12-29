@@ -23,7 +23,7 @@ var equal = require('equals');
 // 	<input placeholder="请输入副标题" ref="subTitle" onChange={this.onSubTitleChange} />
 // 	<span className="new-subtitle" onClick={this.onDelSubTitle}>删除</span>
 // </div>
-
+//<div className="loading"><Spin spinning={false ? true : false} tip="上传中,请勿重复操作"/></div>
 //						<span className="new-subtitle" onClick={this.onDisplaySubTitle} >创建副标题</span>
 // <Map setAddress={ (address,lnglat) =>this.setAddress(address , lnglat)} address = {this.state.activeInfo.address} setLnglat= { (lnglat) =>this.setLnglat(lnglat)}/>
 
@@ -108,7 +108,7 @@ export default class NewActive extends Component{
 				activeInfo : activeInfo,
 				preActiveInfo : Object.assign({} , activeInfo),
 				mainTitleSize : activeInfo.title.length,
-				imageUrl:  activeInfo.logo,
+				imageUrl:  activeInfo.imageUrl || '',
 				QRcode : activeInfo.QRcode || '' ,
 				imgPreview : true,
 				timeStatus : {
@@ -262,7 +262,7 @@ export default class NewActive extends Component{
 			activeInfo.desc = "活动简介";
 		}
 
-		if(activeInfo.isOpenLimit && activeInfo.activeLimit == ""){
+		if(activeInfo.isOpenLimit && activeInfo.activeLimit == ""  ){
 			message.error("请输入活动限定人数");
 			return ;
 		}
@@ -273,14 +273,16 @@ export default class NewActive extends Component{
 
 		if(this.state.operating == 0 ){
 			activeInfo.imageUrl = this.state.imageUrl;
+			activeInfo.QRcode = this.state.QRcode;
 			DataStore.addActive(activeInfo).then( data =>{
 				 message.success('添加活动成功');
 				 hashHistory.push("/main/active")
 			} , error => message.error("添加失败,请稍后再试.."));
 		}else{
 			activeInfo.imageUrl = this.state.imageUrl;
-			message.success("修改成功");
-			hashHistory.push("/main/active");
+			activeInfo.QRcode = this.state.QRcode;
+			// message.success("修改成功");
+			// hashHistory.push("/main/active");
 			DataStore.editActive(activeInfo).then( data=> {
 				if(callback &&  typeof(callback) == 'function'){
 					callback();
@@ -289,11 +291,7 @@ export default class NewActive extends Component{
 				}  
 			} , error => {
 				message.error("修改失败,请稍后再试..");
-				hashHistory.push("/main/active");
-			}
-
-
-			);	
+			});	
 		}	
 	}
 
@@ -308,12 +306,10 @@ export default class NewActive extends Component{
 			});
 
 		}else{
-			this.setState({
-				// imgPreview : true
-			});
 		}
 	}
 
+	// 活动群二维码上传
 	handleActiveQRcodeChange(info){
 		if (info.file.status === 'done') {
 			// console.log(info);
@@ -323,9 +319,6 @@ export default class NewActive extends Component{
 			});
 
 		}else{
-			this.setState({
-				// imgPreview : true
-			});
 		}
 	}
 
@@ -471,6 +464,7 @@ export default class NewActive extends Component{
 
 	render() {
 		const imageUrl = this.state.imageUrl;
+		const QRcode = this.state.QRcode;
 
 		return (
 			<div className="newactive-wrap">
@@ -487,7 +481,7 @@ export default class NewActive extends Component{
 				<div className="newactive-content">
 					
 					<div className="active-form">
-						<div className={this.state.imgPreview ? 'active-img bghidden' :"active-img"}>
+						<div className={this.state.imgPreview && imageUrl!="" ? 'active-img bghidden' :"active-img"}>
 							<Upload
 						        className="avatar-uploader"
 						        name="activeImg"
@@ -497,30 +491,29 @@ export default class NewActive extends Component{
 						      >
 						        {
 						          imageUrl ?
-						            <img src={decodeURI(this.state.imageUrl)} role="presentation" className="avatar" /> :
+						            <img src={decodeURI(imageUrl)} role="presentation" className="avatar" /> :
 						            <Icon type="plus" className="avatar-uploader-trigger" />
 						        }
 						      </Upload>
 						</div>
 						<span className="img-desc">图片大小750*450</span>
 
-						<div className={this.state.imgPreview ? 'active-QRcode bghidden' :"active-QRcode"}>
+						<div className={this.state.QRcodePreview && QRcode != "" ? 'active-QRcode bghidden' :"active-QRcode"}>
 							<Upload
 						        className="avatar-uploader"
-						        name="activeImg"
+						        name="QRcode"
 						        showUploadList={false}
 						        action= {"http://" + __SERVER_URL__ + "services/UploadData"}
 						        onChange={this.handleActiveQRcodeChange}
 						      >
 						        {
-						          imageUrl ?
-						            <img src={decodeURI(this.state.QRcode)} role="presentation" className="avatar" /> :
+						          QRcode ?
+						            <img src={decodeURI(QRcode)} role="presentation" className="avatar" /> :
 						            <Icon type="plus" className="avatar-uploader-trigger" />
 						        }
 						      </Upload>
 						</div>
 
-						<div className="loading"><Spin spinning={false ? true : false} tip="上传中,请勿重复操作"/></div>
 						<div className="form-item active-maintitle">
 							<span className="label">主题:</span>
 							<div>

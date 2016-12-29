@@ -16,8 +16,9 @@ export default class ImageCrop extends Component{
 		 const {editorState} = this.state;
 		return (
 			<div>
-			<Editor editorState={this.state.editorState} onChange={this.onChange} placeholder="Write something colorful...">
-			</Editor>
+				<Editor editorState={this.state.editorState} onChange={this.onChange} placeholder="Write something colorful...">
+				</Editor>
+				{/**/}
 			</div>
 		)
 	}

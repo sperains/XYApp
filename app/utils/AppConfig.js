@@ -19,17 +19,17 @@ var Config =  {
     * 接口配置
     * */
     ApiConfig:{
-        getBarginInfo:_getFullUrlFromRelative("CheckInServer/getGoodsInfo"),            //
+        getBarginInfo:_getFullUrlFromRelative("CheckInServer/getGoodsInfo"),            
         getActiveList : _getFullUrlFromRelative("CheckInServer/getAllActivityList"),                        //获取活动列表
         getActiveDetail : _getFullUrlFromRelative("CheckInServer/getActiveDetail"),                 //获取活动详情
         getEnrollList : _getFullUrlFromRelative("CheckInServer/getEnrollList"),                           //获取活动报名详情
         getMemberList : _getFullUrlFromRelative("UserServer/getMemberList"),                 //获取会员列表
-        getMemberListById : _getFullUrlFromRelative("UserServer/getMemberDetail"),
-        updateMemberLevel : _getFullUrlFromRelative("UserServer/modMemberLevel"),
-        addActive : _getFullUrlFromRelative("CheckInServer/addActivity"),
-        editActive : _getFullUrlFromRelative("CheckInServer/modActivity"),
-        deleteActive : _getFullUrlFromRelative("CheckInServer/delActivity"),
-        releaseActive : _getFullUrlFromRelative("CheckInServer/releaseActivity"),
+        getMemberListById : _getFullUrlFromRelative("UserServer/getMemberDetail"),      //获取会员详情
+        updateMemberLevel : _getFullUrlFromRelative("UserServer/modMemberLevel"),   //修改会员等级
+        addActive : _getFullUrlFromRelative("CheckInServer/addActivity"),                           //添加活动
+        editActive : _getFullUrlFromRelative("CheckInServer/modActivity"),                          //编辑活动
+        deleteActive : _getFullUrlFromRelative("CheckInServer/delActivity"),                        //删除活动
+        releaseActive : _getFullUrlFromRelative("CheckInServer/releaseActivity"),                  
         getNumDetail : _getFullUrlFromRelative("CheckInServer/getNumerologyList"),
         updateNumInfo : _getFullUrlFromRelative("CheckInServer/putNumerology"),
         getScoreRank : _getFullUrlFromRelative("CheckInServer/getScoreRank"),

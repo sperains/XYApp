@@ -370,7 +370,7 @@ export default class Number extends Component{
 				}
 				let currentIndex = num == 0 ? 9 : num-1;
 
-				if(i == 0){		//天赋数
+				if(i == 0){		//命运数
 					// debugger;
 					// fateInfo = Assign.copy(fateInfo , me.state.fateNumList[currentIndex] );
 					flag = equal( fateInfo ,  originalFateNumList[tab.currentNum - 1]);
@@ -416,10 +416,10 @@ export default class Number extends Component{
 					}
 
 					fateInfo = me.state.fateNumList[currentIndex];
-				}else{			//命运数
+				}else{			//天赋数
 					// talentInfo = Assign.copy(talentInfo , me.state.talentNumList[currentIndex])  ;
 
-					flag = equal( talentInfo ,  originalTalentNumList[tab.currentNum - 1]);
+					flag = equal( talentInfo ,  originalTalentNumList[tab.currentNum == 0 ? 9 :  tab.currentNum - 1]);
 					if(!flag){
 						me.setState({
 							modalOption : {
